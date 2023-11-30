@@ -1,10 +1,19 @@
 import { postgres } from "../deps.js";
 
 let sql;
-if (Deno.env.get("DATABASE_URL")) {
-  sql = postgres(Deno.env.get("DATABASE_URL"));
-} else {
-  sql = postgres({});
+
+if (Deno.env.get("PGUSER")) {
+    sql = postgres({
+        user: Deno.env.get("PGUSER"),
+        password: Deno.env.get("PGPASSWORD"),
+        database: Deno.env.get("PGDATABASE"),
+        host: Deno.env.get("PGHOST"),
+        port: parseInt(Deno.env.get("PGPORT")),
+    });
+}
+else {
+    console.log("test");
+    sql = postgres({});
 }
 
 export { sql };
