@@ -14,7 +14,7 @@
 <div>
   <h2>Application Statistics</h2>
   <ul>
-    <li>"stats here"</li>
+    <li><strong>Users:</strong> <%= topicsCount %></li>
   </ul>
 </div>
 

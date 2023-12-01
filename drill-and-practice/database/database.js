@@ -1,9 +1,12 @@
 import { postgres } from "../deps.js";
 
-let sql;
+const DATABASE_URL = "---"
 
-//get the database connection parameters from the environment file "project.env"
-//if the environment file does not exist, use the default values
-
+if (DATABASE_URL) {
+    console.log("DATABASE_URL: " + DATABASE_URL);
+}
+const sql = postgres(
+    DATABASE_URL
+);
 
 export { sql };
