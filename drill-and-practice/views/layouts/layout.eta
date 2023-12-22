@@ -1,1 +1,18 @@
-<%~ it.body %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.1/dist/paper.min.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/topics">Topics</a></li>
+                <li><a href="/quiz">Quiz</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <%~ it.body %>
+        </div>
+    </body>
+</html>
