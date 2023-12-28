@@ -3,8 +3,8 @@
 <h1>Topics</h1>
 
 <% if (it.admin) {%>
-    <form method="POST" action="/topics">
-        Name: <input type="text" name="name"/>
+    <form method="POST" action="/topics" class="text-input">
+        Name:&nbsp <input type="text" name="name"/>
         <button type="submit">Add</button>
     </form>
 <% }; %>
@@ -20,13 +20,14 @@
 <% }; %>
 <% if (it.topics && it.topics.length > 0) { %>
     <ul>
-        <% it.topics.forEach((topic) => { %>
-            <li><a role="button" href="/topics/<%=topic.id%>"><%=topic.name%></a>
-                <form method="POST" action="/topics/<%=topic.id%>/delete">
-                    <% if (it.admin) { %>
+        <% it.topics.sort((a, b) => a.name.localeCompare(b.name)).forEach((topic) => { %>
+            <li>
+                <a role="button" href="/topics/<%=topic.id%>"><%=topic.name%></a>
+                <% if (it.admin) { %>
+                    <form method="POST" action="/topics/<%=topic.id%>/delete">
                         <button type="submit">Delete</button>
-                    <% }; %>
-                </form>
+                    </form>
+                <% }; %>
             </li>
         <% }); %>
     </ul>

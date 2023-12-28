@@ -23,7 +23,6 @@ const addQuestion = async ({ params, request, response, render, state }) => {
         data.errors = errors;
         data.topic = await dataBaseService.getTopicById(topicID);
         data.questions = await dataBaseService.getQuestionsByTopicId(topicID);
-        console.log(data);
         render("partials/questionsView.eta", data);
     }
 };
