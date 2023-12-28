@@ -1,15 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <title>Drill and practice</title>
         <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.1/dist/paper.min.css">
+        <style>
+            nav {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 0;
+            }
+            .navlink {
+                margin: 0 20px;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 10px 20px;
+            }
+            .info {
+                display: flex;
+                margin-top: 50px;
+            }
+            p {
+                margin: 0 10px;
+            }
+            button {
+                margin: 10px;
+            }
+            .stats {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin: 10px;
+            }
+            ul {
+                margin-bottom: 50px;
+                padding: 0;
+            }
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px;
+            }
+            .options {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px;
+            }
+            .question {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px;
+            }
+            form.options {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .text-input {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            .text-input-item {
+                margin: 10px;
+            }
+            .error {
+                color: red;
+                margin: 10px;
+                font-size: 24px;
+            }
+        </style>
     </head>
     <body>
         <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/topics">Topics</a></li>
-                <li><a href="/quiz">Quiz</a></li>
-            </ul>
+            <a class="navlink" href="/">Home</a>
+            <a class="navlink" href="/topics">Topics</a>
+            <a class="navlink" href="/quiz">Quiz</a>
         </nav>
         <div class="container">
             <%~ it.body %>

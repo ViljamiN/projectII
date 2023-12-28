@@ -5,13 +5,20 @@
 <div>
     <h2>Application Statistics</h2>
     <ul>
-        <li>Amount of topics: <%= it.topicsCount %></li>
-        <li>Amount of questions: <%= it.questionsCount %></li>
-        <li>Amount of answers: <%= it.answersCount %></li>
+        <li class="stats" >Amount of topics: <%= it.topicsCount %></li>
+        <li class="stats" >Amount of questions: <%= it.questionsCount %></li>
+        <li class="stats" >Amount of answers: <%= it.answersCount %></li>
     </ul>
 </div>
 
-<div>
+<div class="register-or-login">
   <a href="/auth/register">Register</a>
   <a href="/auth/login">Login</a>
+</div>
+
+<div class="info">
+    <p>Drill and practice is a web application that allows you to practice your knowledge of a topic by answering questions.</p>
+    <p>To get started, register or login.</p>
+    <p>After that, you can create a question for a topic created by an admin, and add answer options for it.</p>
+    <p>When you are ready, you can start a drill session for a topic and answer questions from the quiz-link.</p>
 </div>

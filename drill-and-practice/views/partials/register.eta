@@ -3,18 +3,19 @@
 <h1>Register</h1>
 
 <form method="POST" action="/auth/register">
-    Email:<tab>
+    Email:
     <input type="email" name="email"><br>
-    Password:<tab>
+    Password:
     <input type="password" name="password">
+    <br>
     <button type="submit">Register</button>
 </form>
 
-<% if (it.errors) {%>
+<% if (it.errors) { %>
     <ul>
         <% Object.keys(it.errors).forEach((attribute) => { %>
             <% Object.values(it.errors[attribute]).forEach((err) => { %>
-                <li>Error: <%= err%></li>
+                <p class="error">Error: <%= err%></p>
             <% }); %>
         <% }); %>
     </ul>
